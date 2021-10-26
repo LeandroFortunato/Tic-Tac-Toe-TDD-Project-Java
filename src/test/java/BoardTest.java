@@ -26,43 +26,43 @@ public class BoardTest {
         return Arrays.asList(new Object[][][] {
 
                 {new Object [] {"O", "O", "O",
-                                "X", "X", "O",    //  <---- strike
-                                "X", " ", " "},
+                        "X", "X", "O",    //  <---- strike
+                        "X", " ", " "},
                         new Object[] {"Winner player: O - Strike: Horizontal 0"}},
 
                 {new Object [] {"X", "O", "O",
-                                "X", "X", "O",    //  <---- strike
-                                "O", "O", "X"},
+                        "X", "X", "O",    //  <---- strike
+                        "O", "O", "X"},
                         new Object[] {"Winner player: X - Strike: Diagonal 0"}},
 
                 {new Object [] {"X", " ", " ",
-                                "X", "X", "O",    //  <---- strike
-                                "O", "O", "O"},
+                        "X", "X", "O",    //  <---- strike
+                        "O", "O", "O"},
                         new Object[] {"Winner player: O - Strike: Horizontal 2"}},
 
                 {new Object [] {"O", "O", "X",
-                                "O", "X", "X",    //  <---- strike
-                                "X", "O", "X"},
+                        "O", "X", "X",    //  <---- strike
+                        "X", "O", "X"},
                         new Object[] {"Winner player: X - Strike: Vertical 2"}},
 
                 {new Object [] {"O", "X", "X",
-                                "O", "O", "O",    //  <---- strike
-                                "X", "O", "X"},
+                        "O", "O", "O",    //  <---- strike
+                        "X", "O", "X"},
                         new Object[] {"Winner player: O - Strike: Horizontal 1"}},
 
                 {new Object [] {"X", " ", " ",
-                                "X", " ", "O",    //  <---- strike
-                                "X", "O", "O"},
+                        "X", " ", "O",    //  <---- strike
+                        "X", "O", "O"},
                         new Object[] {"Winner player: X - Strike: Vertical 0"}},
                 {new Object [] {"O", " ", "X",
-                                "O", "X", "O",    //  <---- strike
-                                "X", "O", "X"},
+                        "O", "X", "O",    //  <---- strike
+                        "X", "O", "X"},
                         new Object[] {"Winner player: X - Strike: Diagonal 1"}},
         });
     }
 
     @Test
-    public void CheckIfExpectedResultsAreCorrect() {
+    public void CheckInformedGameIfAnybodyWonAlsoTheTypeOfStrikeAndIfMatchesTheInformedResult() {
 
         Board game = new Board();
 
@@ -71,8 +71,8 @@ public class BoardTest {
 
         for (int i = 0; i < this.input.length; i=i+3) {
             System.out.println(this.input[i]+ "  "+
-                                this.input[i+1]+ "  "+
-                                this.input[i+2]);
+                    this.input[i+1]+ "  "+
+                    this.input[i+2]);
         }
         System.out.println("Expected: " +  this.expectedOutput[0]);
 

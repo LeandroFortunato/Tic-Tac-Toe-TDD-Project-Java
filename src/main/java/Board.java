@@ -1,18 +1,16 @@
-
-
 public class Board{
-        public String [] boardMatrix;
-        public String [] myChoices;
-        public int currentTurn;
-        public Board () {
-            this.boardMatrix  = new String [9];
-            this.myChoices    = new String [] {"O", "X"};
-            this.currentTurn  = 0;
-        }
-        public void getNextTurn (){}
+    public String [] boardMatrix;
+    public String [] myChoices;
+    public int currentTurn;
+    public Board () {
+        this.boardMatrix  = new String [9];
+        this.myChoices    = new String [] {"O", "X"};
+        this.currentTurn  = 0;
+    }
+    public void getNextTurn (){}
 
 
-    public String[] CheckIfAnybodyWon(String[] pParameter) {
+    public String[] CheckIfAnybodyWon(String[] pBoardOfGamePlayed) {
 
         //  Check first all board for any strike of player X
         //  and then all board again for any strike of player O
@@ -26,9 +24,9 @@ public class Board{
              */
 
             for (int i = 0; i < 3; i++) { // i for each vertical (verticals 0,1 and 2)
-                if ((pParameter[i]).equals(player) &&
-                        (pParameter[i + 3]).equals(player) &&
-                        (pParameter[i + 6]).equals(player)) {
+                if ((pBoardOfGamePlayed[i]).equals(player) &&
+                        (pBoardOfGamePlayed[i + 3]).equals(player) &&
+                        (pBoardOfGamePlayed[i + 6]).equals(player)) {
 
                     return new String[]{ "Winner player: "+player+ " - Strike: Vertical " + i };
 
@@ -42,9 +40,9 @@ public class Board{
              */
 
             for (int i = 0; i < 9; i=i+3) { //horizontals jumps by 3
-                if ((pParameter[i]).equals(player) &&
-                        (pParameter[i + 1]).equals(player) &&
-                        (pParameter[i + 2]).equals(player)) {
+                if ((pBoardOfGamePlayed[i]).equals(player) &&
+                        (pBoardOfGamePlayed[i + 1]).equals(player) &&
+                        (pBoardOfGamePlayed[i + 2]).equals(player)) {
 
                     return new String[]{ "Winner player: "+player+ " - Strike: Horizontal " + i/3 };
 
@@ -59,15 +57,15 @@ public class Board{
               6,   7,   8 }
              */
 
-            if     ((pParameter[0]).equals(player) &&
-                    (pParameter[4]).equals(player) &&
-                    (pParameter[8]).equals(player)) {
+            if     ((pBoardOfGamePlayed[0]).equals(player) &&
+                    (pBoardOfGamePlayed[4]).equals(player) &&
+                    (pBoardOfGamePlayed[8]).equals(player)) {
 
                 return new String[]{"Winner player: "+player+ " - Strike: Diagonal 0"};
 
-            }else if ((pParameter[2]).equals(player) &&
-                    (pParameter[4]).equals(player) &&
-                    (pParameter[6]).equals(player)) {
+            }else if ((pBoardOfGamePlayed[2]).equals(player) &&
+                    (pBoardOfGamePlayed[4]).equals(player) &&
+                    (pBoardOfGamePlayed[6]).equals(player)) {
 
                 return new String[]{"Winner player: "+player+ " - Strike: Diagonal 1"};
             }
