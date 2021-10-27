@@ -62,7 +62,7 @@ public class BoardTest {
     }
 
     @Test
-    public void CheckInformedGameIfAnybodyWonAlsoTheTypeOfStrikeAndIfMatchesTheInformedResult() {
+    public void CheckInformedGameIfAnybodyWonAlsoTheTypeOfStrikeAndIfMatchesTheInformedResult() { //
 
         Board game = new Board();
 
