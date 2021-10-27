@@ -1,4 +1,4 @@
-# tictactoe
+# tictactoe - change in description
 
 Verticals   possible strikes: n,0->2: Cn,Cn+3,Cn+6  (columns)
 Horizontals possible strikes: n,0->2: Rn,Rn+1,Rn+2  (rows)
